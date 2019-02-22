@@ -1,44 +1,46 @@
 {
-  "name": "twentynineteen",
+  "name": "faya",
   "version": "1.0.0",
-  "description": "Default WP Theme",
-  "bugs": {
-    "url": "https://github.com/WordPress/twentynineteen/issues"
-  },
-  "homepage": "https://github.com/WordPress/twentynineteen#readme",
-  "devDependencies": {
-    "@wordpress/browserslist-config": "^2.2.2",
-    "autoprefixer": "^9.1.5",
-    "chokidar-cli": "^1.2.1",
-    "node-sass": "^4.9.3",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.0.1",
-    "postcss-focus-within": "^3.0.0",
-    "rtlcss": "^2.4.0"
-  },
-  "rtlcssConfig": {
-    "options": {
-      "autoRename": false,
-      "autoRenameStrict": false,
-      "blacklist": {},
-      "clean": true,
-      "greedy": false,
-      "processUrls": false,
-      "stringMap": []
-    },
-    "plugins": [],
-    "map": false
-  },
-  "browserslist": [
-    "extends @wordpress/browserslist-config"
-  ],
+  "description": "Use Sass with WordPress, Node Script in SCSS flavour.",
   "scripts": {
-    "build:style": "node-sass style.scss style.css --output-style expanded && postcss -r style.css",
-    "build:style-editor": "node-sass style-editor.scss style-editor.css --output-style expanded && postcss -r style-editor.css",
-    "build:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --output-style expanded && postcss -r style-editor-customizer.css",
-    "build:rtl": "rtlcss style.css style-rtl.css",
-    "build:print": "node-sass print.scss print.css --output-style expanded && postcss -r print.css",
-    "build": "run-p \"build:*\"",
-    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+    "css": "node-sass --output-style compressed --include-path scss assets/css/source.scss style.css",
+    "watch": "nodemon -e scss -x \"npm run css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadawais/WPSass.git"
+  },
+  "author": "Ahmad Awais",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmadawais/WPSass/issues"
+  },
+  "homepage": "https://github.com/ahmadawais/WPSass#readme",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-cache": "^1.1.1",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.1.0",
+    "gulp-ignore": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.1",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-zip": "^4.2.0"
   }
 }
