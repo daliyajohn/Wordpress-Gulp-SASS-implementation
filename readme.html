@@ -7,8 +7,9 @@ For local use with gulp
 Install gulp-install as a development dependency:
 2. npm install --save-dev gulp-install
 
+3. npm init in our theme folder
 
-3. themefolder/
+4. themefolder/
     ├── index.php
     ├── style.css
     └── assets/
@@ -23,6 +24,14 @@ Install gulp-install as a development dependency:
             └── _layout.scss
             └── style.scss
 
-4. Include base and layout in style.scss
+5. Include base and layout in style.scss
    @import 'base';
    @import 'layout';
+
+6. Create gulpfile.js file in our theme folder 
+   var gulp = require('gulp');
+    gulp.task('hello', function() {
+      console.log('First Task');
+    })
+
+7. Run gulp - gulp task name
