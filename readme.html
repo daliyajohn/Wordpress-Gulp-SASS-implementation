@@ -1,1 +1,28 @@
+##For global use with slush
+Install gulp-install as a dependency:
+1. npm install --save gulp-install
 
+
+For local use with gulp
+Install gulp-install as a development dependency:
+2. npm install --save-dev gulp-install
+
+
+3. themefolder/
+    ├── index.php
+    ├── style.css
+    └── assets/
+        ├── images/
+        │   └── cat.jpg
+        ├── js/
+        │   ├── components/
+        │   │   └── slider.js
+        │   └── bundle.js
+        └── css/
+            ├── _base.scss/
+            └── _layout.scss
+            └── style.scss
+
+4. Include base and layout in style.scss
+   @import 'base';
+   @import 'layout';
