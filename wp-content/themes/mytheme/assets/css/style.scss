@@ -1,0 +1,26 @@
+/*
+Theme Name: pennemblem
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: Faya team
+Author URI: https://wordpress.org/
+Description: Image is everything at Penn Emblem Company. Applique patches, embroidered patches and embroidered badges are at the heart of our manufacturing operation.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pennemblem
+Tags: Image is everything at Penn Emblem Company. Applique patches, embroidered patches and embroidered badges are at the heart of our manufacturing operation.
+*/
+@charset 'utf-8';
+/* =============================================================================
+   The css files are structured using smacss (https://smacss.com/book)
+    Base Rules    -- base.scss
+    Layout Rules  -- layout.scss
+    Theme Rules   -- theme.scss
+    For better code maintainability, the Module and State rules are removed.
+    Instead of module.scss, seperate components have to be created and the
+    styles should be added on the component folder.
+========================================================================== */
+@import 'base';
+@import 'layout';
+@import 'theme';
+
